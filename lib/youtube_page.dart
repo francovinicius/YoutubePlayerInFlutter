@@ -49,7 +49,45 @@ class _YoutubePageState extends State<YoutubePage> {
                   );
                 },
               ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                          child: Text('Como usar o App', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),))
+                  ),
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                      child: const Text('Aqui ficará a descrição do texto! \nIt is a long established fact that a reader will be distracted by the readable'
+                          ' content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal'
+                          ' distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages'
+                          ' and web page editors now use Lorem Ipsum as their default model text, and a search for',
+                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w300),))
+              ),
 
+              const SizedBox(
+                height: 30,
+              ),
+              
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+
+                  Column(
+                    children: [
+                      Icon(Icons.download_rounded, size: 50,),
+                      Text('Donwload'),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Icon(Icons.question_answer, size:50,),
+                      Text('Questionário'),
+                    ],
+                  ),
+                ],
+              ),
 
             ],
           ),
