@@ -49,12 +49,14 @@ class _YoutubePageState extends State<YoutubePage> {
                   );
                 },
               ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-                          child: Text('Como usar o App', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),))
+              Align(
+                  alignment: Alignment.centerLeft,
+                  child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+                      child: Text('Como usar o App', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),)
+                  )
                   ),
+
               Align(
                   alignment: Alignment.centerLeft,
                   child: Container(
@@ -70,17 +72,29 @@ class _YoutubePageState extends State<YoutubePage> {
                 height: 30,
               ),
               
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
 
-                  Column(
-                    children: [
-                      Icon(Icons.download_rounded, size: 50,),
-                      Text('Donwload'),
-                    ],
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text("Abrindo Questionário!", textAlign: TextAlign.center),
+                              backgroundColor: Colors.blueGrey,
+                            ));
+                      }
+                      );
+                    },
+                    child: const Column(
+                      children: [
+                        Icon(Icons.download_rounded, size: 50,),
+                        Text('Donwload'),
+                      ],
+                    ),
                   ),
-                  Column(
+                  const Column(
                     children: [
                       Icon(Icons.question_answer, size:50,),
                       Text('Questionário'),
